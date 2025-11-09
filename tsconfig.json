@@ -12,7 +12,9 @@
     "declarationMap": true,
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true,
-    "strict": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+
   }
 }
 

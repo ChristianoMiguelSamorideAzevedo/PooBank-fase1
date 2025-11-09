@@ -6,4 +6,3 @@ export declare class Cliente {
     apresentar(): string;
     mostrarCliente(): string;
 }
-//# sourceMappingURL=Cliente.d.ts.map
