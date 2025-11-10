@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "lib": ["ESNext"],
     "types": ["node"],
-  "skipLibCheck": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -14,8 +14,8 @@
     "noPropertyAccessFromIndexSignature": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true
-
-  }
+  },
+  "exclude": ["dist", "node_modules"]
 }
 
 

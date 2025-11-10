@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UML POOBANK</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      color: #00FF66;
+    }
+
+    .uml-diagram {
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .uml-diagram img {
+      max-width: 90%;
+      height: auto;
+      border: 2px solid #00FF66;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: white;
+    }
+
+    /* Estilo para a lista UML: espaçamento e cores */
+    .uml-list {
+      margin: 1rem 0 2rem 1.2rem;
+      padding: 0;
+    }
+    .uml-list > li {
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    .uml-list li ul {
+      margin-top: 0.4rem;
+      margin-bottom: 0.4rem;
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>As Classes Esperadas no POOBank:</h1>
+
+<h2> Com base no enunciado, o UML ideal deve conter: </h2>
+<ol class="uml-list">
+  <li>
+    <strong>Cliente</strong>
+    <ul>
+      <li>Atributos: nome, CPF, endereço, lista de contas</li>
+      <li>Métodos: registrar chave PIX, listar contas</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Conta (classe abstrata)</strong>
+    <ul>
+      <li>Atributos: número, saldo (private), titular (Cliente), lista de transações</li>
+      <li>Métodos: depositar(valor), sacar(valor), transferir(valor, contaDestino), toJSON()</li>
+    </ul>
+  </li>
+  <li>
+    <strong>ContaCorrente (herda de Conta)</strong>
+    <ul>
+      <li>Atributos: limiteChequeEspecial</li>
+      <li>Métodos: sobrescrever sacar() se necessário</li>
+    </ul>
+  </li>
+  <li>
+    <strong>ContaPoupanca (herda de Conta)</strong>
+    <ul>
+      <li>Atributos: taxaJuros</li>
+      <li>Métodos: renderJuros()</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Transacao</strong>
+    <ul>
+      <li>Atributos: tipo (enum), valor, data, descrição</li>
+      <li>Métodos: estático</li>
+    </ul>
+  </li>
+  <li>
+    <strong>PIX</strong>
+    <ul>
+      <li>Atributos: chave (email, CPF), conta associada</li>
+      <li>Métodos: buscar conta por chave</li>
+    </ul>
+  </li>
+</ol>
+
+<section class="uml-diagram">
+  <h2>Diagrama UML do POOBank</h2>
+  <!-- Substitua o src pela localização correta da sua imagem -->
+  <img src="/public/img/UML_POOBANK.jpg" alt="Diagrama UML do POOBank">
+</section>
+
+</body>
+</html>
